@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -26,13 +26,79 @@
         >
       </div>
     </div>
-    <div class="main-form">
+    <div class="container">
       <header>
         <h1>Let's get started!</h1>
         <div class="header-line">
           <span class="header-line text">Sign-up</span>
         </div>
       </header>
+      <form action="#" class="main-form">
+        <div class="form-row">
+          <label for="first-name">FIRST NAME</label>
+          <input type="text" name="firstName" id="first-name" required />
+        </div>
+        <div class="form-row">
+          <label for="last-name">LAST NAME</label>
+          <input type="text" name="lastName" id="last-name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">EMAIL</label>
+          <input type="text" name="email" id="email" required />
+        </div>
+        <div class="form-row">
+          <label for="phone-num">PHONE NUMBER</label>
+          <!-- Pattern for Indonesian phone numbers -->
+          <input
+            type="tel"
+            name="phoneNum"
+            id="phone-num"
+            pattern="^(\+62|62|0)8[1-9][0-9]{6,9}$"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label for="password">PASSWORD</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            minlength="8"
+            maxlength="16"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label for="confirm-password">CONFIRM PASSWORD</label>
+          <input
+            type="password"
+            name="password"
+            id="confirm-password"
+            required
+          />
+          <p class="validation">asdf</p>
+        </div>
+        <div class="decision">
+          <div class="form-row agreement">
+            <label for="agreement">
+              <input
+                type="checkbox"
+                name="isAgree"
+                id="agreement"
+                value="is-agree"
+                required
+              />
+              <span
+                >By clicking this checbox, I accept the
+                <a href="#">Terms and Conditions</a>.</span
+              >
+            </label>
+          </div>
+          <div class="form-row btn">
+            <button type="submit" class="submit-btn">I'm down</button>
+          </div>
+        </div>
+      </form>
     </div>
   </body>
 </html>

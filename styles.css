@@ -2,6 +2,7 @@
   box-sizing: border-box;
   --primary-blue: #4470f6;
   --primary-gray: #acadbc;
+  --label-gray: rgb(108, 107, 107);
 }
 
 *,
@@ -24,12 +25,13 @@ body {
   height: 100vh;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-top: 4px;
+  margin-top: 2.25px;
 }
 
 .credit {
   text-align: center;
   color: gray;
+  font-size: 0.75rem;
 }
 
 .credit a {
@@ -41,14 +43,15 @@ body {
   color: var(--primary-blue);
 }
 
-.main-form {
-  width: 60vw;
+.container {
+  width: 50vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 3rem;
+  margin-top: -25px;
 }
 
-.main-form header {
+.container header {
   font-size: 1.6rem;
 }
 
@@ -60,7 +63,6 @@ header h1 {
 .header-line {
   height: 1em;
   display: flex;
-  justify-content: center;
   align-items: center;
   color: var(--primary-gray);
 }
@@ -68,15 +70,93 @@ header h1 {
 .header-line.text {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: .5rem;
+  column-gap: 0.5rem;
   align-items: center;
   color: var(--primary-blue);
 }
 
 .header-line.text::before,
 .header-line.text::after {
-  content: "";
+  content: '';
   height: 2px;
   background-color: var(--primary-gray);
   display: block;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"] {
+  width: 225px;
+  height: 25px;
+}
+
+label[for="first-name"],
+label[for="last-name"],
+label[for="email"],
+label[for="phone-num"],
+label[for="password"],
+label[for="confirm-password"] {
+  color: var(--label-gray);
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.main-form {
+  margin-top: -10px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.validation {
+  margin-top: 0;
+  font-size: .75em;
+}
+
+.decision {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.agreement {
+  margin-top: -25px;
+}
+
+.agreement span {
+  font-size: .75em;
+}
+
+.agreement a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.agreement a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100px;
+  padding: .75em;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0832AF;
+  font-weight: bold;
 }
