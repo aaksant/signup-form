@@ -1,5 +1,7 @@
 :root {
   box-sizing: border-box;
+  --primary-blue: #4470f6;
+  --primary-gray: #acadbc;
 }
 
 *,
@@ -13,12 +15,13 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
+  gap: 48px;
+  overflow: hidden;
 }
 
 .left-img {
   width: 40vw;
-  height: auto;
+  height: 100vh;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-top: 4px;
@@ -35,5 +38,45 @@ body {
 }
 
 .credit a:hover {
-  color: rgb(42, 42, 227);
+  color: var(--primary-blue);
+}
+
+.main-form {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-form header {
+  font-size: 1.6rem;
+}
+
+header h1 {
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.header-line {
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-gray);
+}
+
+.header-line.text {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: .5rem;
+  align-items: center;
+  color: var(--primary-blue);
+}
+
+.header-line.text::before,
+.header-line.text::after {
+  content: "";
+  height: 2px;
+  background-color: var(--primary-gray);
+  display: block;
 }
