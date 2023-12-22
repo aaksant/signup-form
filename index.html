@@ -48,12 +48,11 @@
         </div>
         <div class="form-row">
           <label for="phone-num">PHONE NUMBER</label>
-          <!-- Pattern for Indonesian phone numbers -->
           <input
             type="tel"
             name="phoneNum"
             id="phone-num"
-            pattern="^(\+62|62|0)8[1-9][0-9]{6,9}$"
+            pattern="^[0-9]{8}"
             required
           />
         </div>
@@ -76,7 +75,7 @@
             id="confirm-password"
             required
           />
-          <p class="validation">asdf</p>
+          <p class="validation"></p>
         </div>
         <div class="decision">
           <div class="form-row agreement">
@@ -103,5 +102,7 @@
         </div>
       </form>
     </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
